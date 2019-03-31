@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "bin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +25,7 @@
     "inquirer": "^6.2.2",
     "moment": "^2.24.0",
     "node-spotify-api": "^1.0.7",
+    "pkg": "^4.3.7",
     "request": "^2.88.0"
   }
 }

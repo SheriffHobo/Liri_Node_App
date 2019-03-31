@@ -31,8 +31,8 @@ function switchCase() {
 
 // BANDS IN TOWN
 function bandsInTown(parameter) {
+    let bandsName = "";
     if (action === 'concert-this') {
-        let bandsName = "";
         for (let i = 3; i < process.argv.length; i++) {
             bandsName += process.argv[i];
         }
@@ -41,7 +41,7 @@ function bandsInTown(parameter) {
         bandsName = parameter;
     };
 
-    const queryUrl = "https://rest.bandsintown.com/artists/" + bandsName + "/events?app_id=codecademy"; // Error "band name is not defined?"
+    const queryUrl = "https://rest.bandsintown.com/artists/" + bandsName + "/events?app_id=codecademy";
 
     request(queryUrl, function (error, response, body) {
         if (!error && response.statusCode === 200) {
@@ -68,7 +68,6 @@ function bandsInTown(parameter) {
 
 // SPOTIFY
 function spotSong(parameter) {
-
     let searchTrack;
     if (parameter === undefined) {
         searchTrack = "Purple Rain";
